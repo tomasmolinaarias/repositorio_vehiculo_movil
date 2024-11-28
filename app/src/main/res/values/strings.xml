@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">POO_auto</string>
+    <string-array name="combustibles">
+        <item>Seleccione Combustible</item>
+        <item>Gasolina (91 octanos, Regular)</item>
+        <item>Gasolina (95 octanos, Súper)</item>
+        <item>Gasolina (98 octanos, Premium)</item>
+        <item>Diésel</item>
+        <item>GLP (Gas Licuado de Petróleo)</item>
+        <item>GNC (Gas Natural Comprimido)</item>
+        <item>Hidrógeno</item>
+        <item>Eléctrico (Baterías)</item>
+        <item>E85 (Etanol 85%)</item>
+        <item>Biodiésel</item>
+    </string-array>
+</resources>

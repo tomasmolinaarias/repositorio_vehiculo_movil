@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <!-- EditText para marca -->
+    <EditText
+        android:id="@+id/etMarca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Marca de Vehiculo" />
+
+    <!-- EditText para modelo -->
+    <EditText
+        android:id="@+id/etModelo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Modelo del Vehiculo" />
+
+    <!-- EditText para color -->
+    <EditText
+        android:id="@+id/etColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Color de Vehiculo" />
+
+    <!-- EditText para combustible -->
+    <Spinner
+        android:id="@+id/spinnerCombustible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/combustibles" />
+
+    <!-- EditText para año de fabricación -->
+    <EditText
+        android:id="@+id/etAge_fabricacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Año de fabricacion de Vehiculo"/>
+
+    <!-- EditText para kilometraje -->
+    <EditText
+        android:id="@+id/etKilometraje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Kilometraje del Vehiculo"/>
+
+    <!-- EditText para placa -->
+    <EditText
+        android:id="@+id/etPlaca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Placa del Vehiculo" />
+
+    <!-- LinearLayout para los botones ENVIAR y SALIR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ENVIAR" />
+
+        <Button
+            android:id="@+id/btnSalir"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SALIR" />
+    </LinearLayout>
+
+    <!-- LinearLayout para el botón REVISAR REGISTRO -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"> <!-- Se corrige el uso de margen -->
+
+        <Button
+            android:id="@+id/btnRevisar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REVISAR REGISTRO" />
+    </LinearLayout>
+
+</LinearLayout>

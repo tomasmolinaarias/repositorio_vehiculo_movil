@@ -1,5 +1,6 @@
 package com.example.poo_auto;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 public class ListActivity extends AppCompatActivity {
 
     private TextView tvDetallesVehiculo;
-    private Button btnAnterior, btnSiguiente;
+    private Button btnAnterior, btnSiguiente, btnVolverRegistro;
     private ListView lvVehiculos;
 
     private ArrayList<Vehiculo> listaVehiculos;
@@ -30,6 +31,7 @@ public class ListActivity extends AppCompatActivity {
         tvDetallesVehiculo = findViewById(R.id.tvDetallesVehiculo);
         btnAnterior = findViewById(R.id.btnAnterior);
         btnSiguiente = findViewById(R.id.btnSiguiente);
+        btnVolverRegistro = findViewById(R.id.btnVolverRegistro);
         lvVehiculos = findViewById(R.id.lvVehiculos);
 
         // Obtener la lista de vehículos desde MainActivity
@@ -79,6 +81,17 @@ public class ListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 currentPosition = position;
                 mostrarDetallesVehiculo(currentPosition);
+            }
+        });
+
+        // Configurar el botón "Volver a Registro"
+        btnVolverRegistro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Regresar a MainActivity (la actividad de registro)
+                Intent intent = new Intent(ListActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();  // Opcional: Finalizar ListActivity para que no quede en la pila de actividades
             }
         });
     }
